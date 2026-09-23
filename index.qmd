@@ -6,11 +6,8 @@ title: "Haley Valentin — STA 9750 Portfolio"
 
 Hi! My name is Haley Valentin, and I am a graduate student at Baruch College pursuing an M.S. in Digital Marketing. I am interested in social media, content creation, digital storytelling, and using data to better understand online audiences.
 
-This website contains my projects and coursework for STA 9750.```{r}
-#| include: false
-1+1
+This website contains my projects and coursework for STA 9750.
+```{r}
+#| echo: false
+cat("Last Updated:", format(Sys.time(), "%A %m %d, %Y at %H:%M%p"))
 ```
-
---------------
-
-Last Updated: `r format(Sys.time(), "%A %m %d, %Y at %H:%M%p")`
