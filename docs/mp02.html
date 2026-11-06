@@ -143,11 +143,342 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="mini-project-02" class="level1">
-<h1>Mini-Project #02</h1>
-<p>Coming soon.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Public transportation plays an important role in reducing emissions by providing alternatives to personal vehicle travel. This report examines transit agencies across the United States to identify which agencies provide the greatest environmental benefits.</p>
+<p>Using data from the National Transit Database and the U.S. Energy Information Administration, this analysis will compare transit energy consumption, passenger activity, and estimated emissions reductions.</p>
+</section>
+<section id="data-acquisition" class="level2">
+<h2 class="anchored" data-anchor-id="data-acquisition">Data Acquisition</h2>
+<section id="state-electricity-profiles" class="level3">
+<h3 class="anchored" data-anchor-id="state-electricity-profiles">State Electricity Profiles</h3>
+</section>
+<section id="energy-consumption" class="level3">
+<h3 class="anchored" data-anchor-id="energy-consumption">Energy Consumption</h3>
+</section>
+</section>
+<section id="data-cleaning-and-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning-and-preparation">Data Cleaning and Preparation</h2>
+<section id="recoding-transportation-modes" class="level3">
+<h3 class="anchored" data-anchor-id="recoding-transportation-modes">Recoding Transportation Modes</h3>
+</section>
+</section>
+<section id="data-integration-and-initial-exploration" class="level2">
+<h2 class="anchored" data-anchor-id="data-integration-and-initial-exploration">Data Integration and Initial Exploration</h2>
+<section id="state-electricity-profiles-1" class="level3">
+<h3 class="anchored" data-anchor-id="state-electricity-profiles-1">State Electricity Profiles</h3>
+<section id="question-1-five-states-with-the-most-expensive-electricity" class="level4">
+<h4 class="anchored" data-anchor-id="question-1-five-states-with-the-most-expensive-electricity">Question 1: Five States with the Most Expensive Electricity</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="mp02_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="question-2-five-states-with-the-dirtiest-electricity" class="level4">
+<h4 class="anchored" data-anchor-id="question-2-five-states-with-the-dirtiest-electricity">Question 2: Five States with the Dirtiest Electricity</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Five States with the Dirtiest Electricity</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">State</th>
+<th style="text-align: right;">CO2 per MWh</th>
+<th style="text-align: left;">Primary Energy Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">West Virginia</td>
+<td style="text-align: right;">1912</td>
+<td style="text-align: left;">Coal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kentucky</td>
+<td style="text-align: right;">1744</td>
+<td style="text-align: left;">Coal</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wyoming</td>
+<td style="text-align: right;">1724</td>
+<td style="text-align: left;">Coal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Missouri</td>
+<td style="text-align: right;">1456</td>
+<td style="text-align: left;">Coal</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">1426</td>
+<td style="text-align: left;">Petroleum</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="question-3-weighted-average-co2-emissions-in-the-united-states" class="level4">
+<h4 class="anchored" data-anchor-id="question-3-weighted-average-co2-emissions-in-the-united-states">Question 3: Weighted Average CO2 Emissions in the United States</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>  weighted_average
+1         784.8565</code></pre>
+</div>
+</div>
+<p>The generation-weighted average CO2 emissions across the United States is approximately 784.86 pounds of CO2 per MWh.</p>
+</section>
+<section id="question-4-three-rarest-primary-energy-sources" class="level4">
+<h4 class="anchored" data-anchor-id="question-4-three-rarest-primary-energy-sources">Question 4: Three Rarest Primary Energy Sources</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>  primary_source  n
+1    Natural gas 27
+2           Coal  9
+3        Nuclear  5
+4  Hydroelectric  4
+5           Wind  4
+6      Petroleum  1</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>States Using the Three Rarest Primary Energy Sources</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Primary Energy Source</th>
+<th style="text-align: left;">State</th>
+<th style="text-align: right;">Electricity Price ($/MWh)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Hydroelectric</td>
+<td style="text-align: left;">Idaho</td>
+<td style="text-align: right;">95.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hydroelectric</td>
+<td style="text-align: left;">Oregon</td>
+<td style="text-align: right;">111.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hydroelectric</td>
+<td style="text-align: left;">Vermont</td>
+<td style="text-align: right;">184.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hydroelectric</td>
+<td style="text-align: left;">Washington</td>
+<td style="text-align: right;">101.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Petroleum</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">380.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wind</td>
+<td style="text-align: left;">Iowa</td>
+<td style="text-align: right;">93.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wind</td>
+<td style="text-align: left;">Kansas</td>
+<td style="text-align: right;">112.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wind</td>
+<td style="text-align: left;">New Mexico</td>
+<td style="text-align: right;">91.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wind</td>
+<td style="text-align: left;">South Dakota</td>
+<td style="text-align: right;">108.7</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="question-5-new-york-vs.-texas-electricity" class="level4">
+<h4 class="anchored" data-anchor-id="question-5-new-york-vs.-texas-electricity">Question 5: New York vs.&nbsp;Texas Electricity</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>     state CO2_MWh
+1 New York     537
+2    Texas     823</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.532588</code></pre>
+</div>
+</div>
+<p>Based on CO2 emissions per MWh, New York’s electricity is approximately 1.53 times cleaner than Texas’s electricity.</p>
+</section>
+</section>
+<section id="eda---ntd-service" class="level3">
+<h3 class="anchored" data-anchor-id="eda---ntd-service">EDA - NTD Service</h3>
+<section id="question-6-five-transit-services-with-the-most-annual-passenger-trips" class="level4">
+<h4 class="anchored" data-anchor-id="question-6-five-transit-services-with-the-most-annual-passenger-trips">Question 6: Five Transit Services with the Most Annual Passenger Trips</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="mp02_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="question-7-average-trip-length-on-mta-nyc" class="level4">
+<h4 class="anchored" data-anchor-id="question-7-average-trip-length-on-mta-nyc">Question 7: Average Trip Length on MTA NYC</h4>
+<p>The average trip length for MTA New York City Transit is approximately 3.18 miles per passenger trip.</p>
+</section>
+<section id="question-8-are-all-states-represented-in-the-ntd-service-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="question-8-are-all-states-represented-in-the-ntd-service-dataset">Question 8: Are All States Represented in the NTD Service Dataset?</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>character(0)</code></pre>
+</div>
+</div>
+<p>All 50 U.S. states are represented in the NTD Service dataset. No states are missing from the data.</p>
+</section>
+</section>
+</section>
+<section id="data-analysis-combining-transit-and-electricity-data" class="level2">
+<h2 class="anchored" data-anchor-id="data-analysis-combining-transit-and-electricity-data">Data Analysis: Combining Transit and Electricity Data</h2>
+</section>
+<section id="data-analysis-combining-transit-and-electricity-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="data-analysis-combining-transit-and-electricity-data-1">Data Analysis: Combining Transit and Electricity Data</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1123</code></pre>
+</div>
+</div>
+<section id="calculating-electricity-emissions" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-electricity-emissions">Calculating Electricity Emissions</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  agency_id mode_name       electric_emissions
+      &lt;dbl&gt; &lt;chr&gt;                        &lt;dbl&gt;
+1         1 Demand Response                 0 
+2         1 Ferryboat                       0 
+3         1 Motorbus                   548737.
+4         1 Streetcar Rail             523881.
+5         1 Trolleybus                2854414.
+6         1 Vanpool                      5008.</code></pre>
+</div>
+</div>
+</section>
+<section id="calculating-fuel-emissions" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-fuel-emissions">Calculating Fuel Emissions</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  agency_id mode_name       diesel_emissions gasoline_emissions
+      &lt;dbl&gt; &lt;chr&gt;                      &lt;dbl&gt;              &lt;dbl&gt;
+1         1 Demand Response               0           19297313.
+2         1 Ferryboat               6468518.                 0 
+3         1 Motorbus              203667163.           3676680.
+4         1 Streetcar Rail                0                  0 
+5         1 Trolleybus                    0                  0 
+6         1 Vanpool                       0            8762512.</code></pre>
+</div>
+</div>
+</section>
+<section id="additional-fuel-emissions" class="level3">
+<h3 class="anchored" data-anchor-id="additional-fuel-emissions">Additional Fuel Emissions</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  agency_id mode_name       lpg_emissions
+      &lt;dbl&gt; &lt;chr&gt;                   &lt;dbl&gt;
+1         1 Demand Response      5064202.
+2         1 Ferryboat                  0 
+3         1 Motorbus                   0 
+4         1 Streetcar Rail             0 
+5         1 Trolleybus                 0 
+6         1 Vanpool                    0 </code></pre>
+</div>
+</div>
+</section>
+<section id="additional-fuel-emissions-and-combined-estimate" class="level3">
+<h3 class="anchored" data-anchor-id="additional-fuel-emissions-and-combined-estimate">Additional Fuel Emissions and Combined Estimate</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  `Agency Name` mode_name       estimated_emissions emissions_per_trip
+  &lt;chr&gt;         &lt;chr&gt;                         &lt;dbl&gt;              &lt;dbl&gt;
+1 King County   Demand Response           24361515.             19.1  
+2 King County   Ferryboat                  6468518.             11.8  
+3 King County   Motorbus                 210805647.              2.67 
+4 King County   Streetcar Rail              523881.              0.322
+5 King County   Trolleybus                 2854414.              0.271
+6 King County   Vanpool                    8767520.              5.55 
+# ℹ 1 more variable: emissions_per_mile &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="transit-agency-awards" class="level2">
+<h2 class="anchored" data-anchor-id="transit-agency-awards">Transit Agency Awards</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+  `Agency Name`                                     mode_name emissions_per_mile
+  &lt;chr&gt;                                             &lt;chr&gt;                  &lt;dbl&gt;
+1 Snohomish County Public Transportation Benefit A… Motorbus            0.000172
+2 Tri-County Metropolitan Transportation District … Motorbus            0.00402 
+3 Kitsap County Public Transportation Benefit Area… Motorbus            0.0175  
+4 Central Puget Sound Regional Transit Authority    Light Ra…           0.0462  
+5 City of Seattle                                   Monorail…           0.0639  </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+  `Agency Name`                                     mode_name emissions_per_trip
+  &lt;chr&gt;                                             &lt;chr&gt;                  &lt;dbl&gt;
+1 Snohomish County Public Transportation Benefit A… Motorbus            0.000966
+2 Tri-County Metropolitan Transportation District … Motorbus            0.0143  
+3 City of Seattle                                   Monorail…           0.0575  
+4 City of Portland                                  Aerial T…           0.105   
+5 Kitsap County Public Transportation Benefit Area… Motorbus            0.113   </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  median_per_trip median_per_mile
+            &lt;dbl&gt;           &lt;dbl&gt;
+1            5.86            1.07</code></pre>
+</div>
+</div>
+<section id="award-comparison-graphs" class="level3">
+<h3 class="anchored" data-anchor-id="award-comparison-graphs">Award Comparison Graphs</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="mp02_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="mp02_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
