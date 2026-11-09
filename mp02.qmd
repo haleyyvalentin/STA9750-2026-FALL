@@ -616,8 +616,10 @@ This analysis combined National Transit Database service and energy records with
 
 However, the analysis had several limitations. Unmatched service records were excluded, along with 11 records from Washington, D.C., and Puerto Rico because matching state electricity rates were unavailable. Additionally, the analysis relied on partial emissions estimates because ethanol, hydrogen, and certain fuel quantities could not be reliably incorporated into the calculations. Therefore, the results should be interpreted as estimates rather than complete measurements of each agency's total emissions. Despite these limitations, the findings identify Seattle as the top-performing eligible agency in both emissions per passenger mile and emissions per passenger trip.
 
+
 ::: {.callout-note collapse="true"}
 ## AI Usage Disclosure
 
 ChatGPT was used as a supplemental resource to help understand R coding concepts, troubleshoot errors, and brainstorm approaches to the analysis. All code was reviewed and tested in RStudio, and all final written explanations, interpretations, and conclusions were independently completed in my own words.
+
 :::
