@@ -615,5 +615,9 @@ The City of Seattle also received the Cleanest Commute Award for recording the l
 This analysis combined National Transit Database service and energy records with state electricity profiles from the U.S. Energy Information Administration (EIA) to estimate carbon dioxide emissions from electricity consumption and several combustion fuels. Transit agencies were compared using two measures: emissions per passenger trip and emissions per passenger mile. These measures provided different perspectives on the environmental impact of public transportation by accounting for both the number of passenger trips and the distance traveled.
 
 However, the analysis had several limitations. Unmatched service records were excluded, along with 11 records from Washington, D.C., and Puerto Rico because matching state electricity rates were unavailable. Additionally, the analysis relied on partial emissions estimates because ethanol, hydrogen, and certain fuel quantities could not be reliably incorporated into the calculations. Therefore, the results should be interpreted as estimates rather than complete measurements of each agency's total emissions. Despite these limitations, the findings identify Seattle as the top-performing eligible agency in both emissions per passenger mile and emissions per passenger trip.
+
+::: {.callout-note collapse="true"}
 ## AI Usage Disclosure
-ChatGPT was used as a supplementary resource for R coding assistance, debugging, background research, and brainstorming. All analytical work, interpretations, and final results were reviewed and verified in RStudio.
+
+ChatGPT was used as a supplemental resource to help understand R coding concepts, troubleshoot errors, and brainstorm approaches to the analysis. All code was reviewed and tested in RStudio, and all final written explanations, interpretations, and conclusions were independently completed in my own words.
+:::
